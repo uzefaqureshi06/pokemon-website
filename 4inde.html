@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+            font-family: Georgia
+        }
+
+        body {
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+
+        }
+
+
+
+        header {
+            background-color: black;
+        }
+
+        .home {
+            color: white;
+            display: flex;
+            align-items: center;
+            min-height: 143vh;
+            background: url(./png/sarina.jpg)no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-position: fixed;
+            margin-top: -12%;
+
+        }
+
+
+
+
+        nav {
+            font-size: 30px;
+            font-weight: 300;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: rgb(255, 255, 255)0px 10px 20px -10px;
+        }
+
+        nav .logo {
+            margin-left: -30%;
+            font-weight: 900;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
+            color: rgb(255, 255, 255);
+
+        }
+
+        nav .logo span {
+            color: rgb(255, 0, 0);
+        }
+
+        nav ul a {
+            margin-inline: 60px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #ffffff;
+            position: relative;
+        }
+
+        nav ul a:hover {
+            color: rgb(170, 170, 170);
+        }
+
+        nav ul a::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            background-color: #e91e63;
+            height: 2px;
+            width: 0;
+            transition: all .5s;
+        }
+
+        nav ul a:hover::before {
+            width: 100%;
+        }
+        .pok span {
+            text-shadow: 2px 2px #ffffff;
+            color: rgb(255, 0, 0);
+        }
+
+        .pok .mon {
+            font-size: 20px;
+            color: black;
+        }
+
+        .pok .mon:hover {
+            text-shadow: 1px 1px #ffffff;
+        }
+
+
+
+        .image img {
+            height: 551px;
+            width: 450px;
+            border-radius: 5px;
+        }
+
+        .container {
+            margin-top: 30%;
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 6rem;
+        }
+
+        .container .box {
+        
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            margin: 40px;
+        }
+
+        .container .box .imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-radius: 12%;
+            height: 100%;
+            transition: 0.5s ease-in-out;
+            z-index: 2;
+        }
+
+        .container .box .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+        .container .box:hover .imgBx
+        {
+            transform: translate(-35px, -35px);
+        }
+
+        .container .box .imgBx img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+        
+        .container .box .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 15px;
+            transition: 0.5s ease-in-out;
+        }
+        .container .box:hover .content
+        {
+            transform: translate(35px, 35px);
+        }
+        .container .box .content h1{
+color: #ffffff;
+font-size: 30px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 1px;
+text-align: center;
+margin-left: 50px;
+        }
+
+        .container .box .content h1 span{
+           color:red
+            
+        }
+
+        @media(max-width:768px){
+            .container .box:hover .content{
+                transform: translate(0,35px);
+            }
+        }
+        .container .box:hover .imgBx{
+            transform: translate(0,-35px);
+        }
+
+
+        @media(max-width:640px) {
+            .container{
+                margin: 0;
+                width: 666px;
+            }
+            
+        }
+
+        @media(max-width:425px) {
+            .container{
+                margin: 0;
+        height: 6%;
+        width: 379px;
+            }
+            
+        }
+
+        
+        @media(max-width:375px) {
+            .container{
+                margin: 0;
+               height: 6%;
+                width: 380px;
+            }
+            
+        }
+        @media(max-width:768px) {
+            .container{
+                margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 380px;
+            
+            }
+        }
+
+        @media(max-width:1024px) {
+            .container{
+                margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 364px;
+            
+            }
+            .home{
+  margin-top: -0%;
+}
+        }
+     
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Poke<span>mon</span></a>
+            <ul>
+                <a href="./2index.html">Home</a>
+                <a href="#character">Chracter</a>
+                <a href="#">Pokeballs</a>
+                <a href="#">Footer</a>
+            </ul>
+
+    
+        </nav>
+    </header>
+  
+    <div class="container">
+        <div class="pokeball">
+        </div>
+    </div>
+    </div>
+
+    <section class="home" id="home">
+        
+    </section>
+
+
+    <section id="character">
+
+        <div class="container">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./png/Azurill..jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Azu<span>rill</span></h2>
+                                      
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./png/bae.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Ba<span>e</span></h2>
+                        
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./png/piplup.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Pip<span>lup</span></h2>
+                      
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./png/braxian.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Bra<span>xian</span></h2>
+                      
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./png/r.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Cater<span>gua</span></h2>
+                    
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./png/Sylveon..jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Syl<span>veon</span></h2>
+                     
+                </div>
+            </div>
+    
+        </div>
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

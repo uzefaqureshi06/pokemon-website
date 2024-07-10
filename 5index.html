@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+            font-family: Georgia
+        }
+
+        body {
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+
+        }
+
+
+
+        header {
+            background-color: black;
+        }
+
+        .home {
+            color: white;
+            display: flex;
+            align-items: center;
+            min-height: 143vh;
+            background: url(./png/=brock4.jpg)no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-position: fixed;
+
+
+        }
+
+
+
+
+        nav {
+            font-size: 30px;
+            font-weight: 300;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: rgb(255, 255, 255)0px 10px 20px -10px;
+        }
+
+        nav .logo {
+            margin-left: -30%;
+            font-weight: 900;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
+            color: rgb(255, 255, 255);
+
+        }
+
+        nav .logo span {
+            color: rgb(255, 0, 0);
+        }
+
+        nav ul a {
+            margin-inline: 60px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #ffffff;
+            position: relative;
+        }
+
+        nav ul a:hover {
+            color: rgb(170, 170, 170);
+        }
+
+        nav ul a::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            background-color: #e91e63;
+            height: 2px;
+            width: 0;
+            transition: all .5s;
+        }
+
+        nav ul a:hover::before {
+            width: 100%;
+        }
+
+        .pok span {
+            text-shadow: 2px 2px #ffffff;
+            color: rgb(255, 0, 0);
+        }
+
+        .pok .mon {
+            font-size: 20px;
+            color: black;
+        }
+
+        .pok .mon:hover {
+            text-shadow: 1px 1px #ffffff;
+        }
+
+
+
+        .image img {
+            height: 551px;
+            width: 450px;
+            border-radius: 5px;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 320px;
+            position: relative;
+            perspective: 1000px;
+            margin: 4rem;
+        }
+
+        .wrapper .card {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            background: #ffffff;
+            border-radius: 10px;
+            /* transform: translateY(0deg); */
+            /* transform-style: preserve-3d; */
+            backface-visibility: hidden;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        }
+
+        .wrapper:hover .front-face {
+            transform: rotateY(180deg);
+        }
+
+        .wrapper .card img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .wrapper .back-face {
+            background-color: black;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            transform: rotateY(180deg);
+        }
+
+        .wrapper:hover .back-face {
+
+            transform: rotateY(0deg);
+        }
+
+        .wrapper .back-face img {
+    
+            height: 150px;
+            width: 150px;
+            padding: 5px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom,rgb(255, 0, 0),rgb(119, 0, 255) );
+        }
+
+        .wrapper .back-face .info {
+            text-align: center;
+        }
+
+        .back-face .info .title {
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .back-face ul {
+            display: flex;
+        }
+
+        .back-face ul a {
+            display: block;
+            height: 40px;
+            width: 40px;
+            color: #ffffff;
+            text-align: center;
+            margin: 0 5px;
+            line-height: 38px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+            transition: all 0.5s ease;
+        }
+
+        .back-face ul a:hover {
+            color: #1cc7d0;
+            border-color: #1cc7d0;
+            background: linear-gradient(375deg, transparent, transparent);
+        }
+
+
+        .crd{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+flex-wrap: wrap;
+margin: 4rem;
+        }
+
+        @media(max-width:768px) {
+            .crd{
+                width: 59%;
+            }
+            .wrapper{
+               width: 465px;
+               margin: 0;
+            }
+    
+            
+        }
+        @media(max-width:425px) {
+            .crd{
+                width: 72%;
+            }
+            .wrapper{
+               width: 465px;
+               margin: 0;
+            }
+        }
+
+
+        .buro{
+            font-size: 50px;
+    font-weight: 800;
+    margin-left: 41%;
+    margin-top: 2%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+
+        <header>
+            <nav>
+                <a href="#" class="logo">Poke<span>mon</span></a>
+                <ul>
+                    <a href="#home">Home</a>
+                    <a href="#character">Chracter</a>
+                    <a href="#">Pokeballs</a>
+                    <a href="./2index.html">Footer</a>
+                </ul>
+
+
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="pokeball">
+            </div>
+        </div>
+        </div>
+
+        <section  class="home" id="home">
+
+        </section>
+
+
+        <section id="character">
+            <h1 class="buro">Cards</h1>
+            <div class="crd">
+            <div class="wrapper">
+                <div class="card front-face">
+                    <img src="./png/Absol.jpg">
+                </div>
+                <div class="card back-face">
+                    <img src="./png/Absol 2.jpg">
+                    <div class="info">
+                        <div class="title">
+                           Absol
+                        </div>
+                        <p>
+                            User interface designer and <br>front-end developer
+                        </p>
+                    </div>
+                </div>
+               
+         </div>
+            <div class="wrapper">
+                <div class="card front-face">
+                    <img src="./png/Eevee 2.jpg">
+                </div>
+                <div class="card back-face">
+                    <img src="./png/Eevee.jpg">
+                    <div class="info">
+                        <div class="title">
+                           Eevee
+                        </div>
+                        <p>
+                            User interface designer and <br>front-end developer
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="card front-face">
+                    <img src="./png/Beedrill.jpg">
+                </div>
+                <div class="card back-face">
+                    <img src="./png/Beedril2.jpg">
+                    <div class="info">
+                        <div class="title">
+                       Beedrill
+                        </div>
+                        <p>
+                            User interface designer and <br>front-end developer
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="card front-face">
+                    <img src="./png/Umbral 1.jpg">
+                </div>
+                <div class="card back-face">
+                    <img src="./png/Umbral 2.jpg">
+                    <div class="info">
+                        <div class="title">
+                           Umbrean
+                        </div>
+                        <p>
+                            User interface designer and <br>front-end developer
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="card front-face">
+                    <img src="./png/Gasets.jpg">
+                </div>
+                <div class="card back-face">
+                    <img src="./png/Gasket 2.webp">
+                    <div class="info">
+                        <div class="title">
+                           Gasets
+                        </div>
+                        <p>
+                            User interface designer and <br>front-end developer
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="card front-face">
+                    <img src="./png/cindres.jpg">
+                </div>
+                <div class="card back-face">
+                    <img src="./png/cindress 2.jpg">
+                    <div class="info">
+                        <div class="title">
+                           Cindress
+                        </div>
+                        <p>
+                            User interface designer and <br>front-end developer
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+         </div>
+        </section>
+
+
+    </body>
+
+</html>
